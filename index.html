@@ -24,7 +24,9 @@
     font-family: 'Outfit', sans-serif;
     font-weight: 300;
     min-height: 100vh;
-  }nav {
+  }
+
+  nav {
     position: fixed; top: 0; left: 0; right: 0;
     z-index: 100;
     display: flex; align-items: center; justify-content: space-between;
@@ -83,7 +85,27 @@
 
   .hero-title {
     font-family: 'Cormorant Garamond', serif;
-    font-size: clamp(3..btn {
+    font-size: clamp(3.5rem, 7vw, 6rem);
+    font-weight: 300;
+    line-height: 1.05;
+    letter-spacing: -0.02em;
+    margin-bottom: 2rem;
+  }
+
+  .hero-title em {
+    font-style: italic;
+    color: var(--mid);
+  }
+
+  .hero-sub {
+    font-size: 0.9rem;
+    color: var(--mid);
+    line-height: 1.8;
+    max-width: 34ch;
+    margin-bottom: 3rem;
+  }
+
+  .btn {
     display: inline-flex; align-items: center; gap: 0.75rem;
     font-size: 0.75rem;
     letter-spacing: 0.15em;
@@ -154,7 +176,17 @@
   .poems-section { padding: 5rem 4rem; }
 
   .section-header {
-    display: flex; align-items: baseline; justify-co.poems-grid {
+    display: flex; align-items: baseline; justify-content: space-between;
+    margin-bottom: 4rem;
+  }
+
+  .section-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2.5rem;
+    font-weight: 300;
+  }
+
+  .poems-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 0;
@@ -279,7 +311,9 @@
     color: var(--mid);
     font-style: italic;
     white-space: pre-wrap;
-  }.paired-section {
+  }
+
+  .paired-section {
     border-top: 1px solid var(--line);
     border-bottom: 1px solid var(--line);
     margin: 2rem 0;
@@ -470,7 +504,9 @@
     font-size: 0.75rem;
     color: var(--mid);
     letter-spacing: 0.05em;
-  }@keyframes fadeUp {
+  }
+
+  @keyframes fadeUp {
     from { opacity: 0; transform: translateY(24px); }
     to { opacity: 1; transform: translateY(0); }
   }
@@ -560,7 +596,9 @@
   }
 </style>
 </head>
-<body><nav id="nav">
+<body>
+
+<nav id="nav">
   <a class="nav-name" onclick="showPage('home')">Christina Rosie</a>
   <ul class="nav-links">
     <li><a onclick="showPage('poems')">Poems</a></li>
@@ -601,6 +639,7 @@
     <div class="section-header">
       <h2 class="section-title">The Collection</h2>
     </div>
+
     <div class="poems-grid">
       <div class="poem-card" onclick="showPoem(0)">
         <p class="poem-num">01</p>
@@ -699,7 +738,9 @@
         <div class="poem-meta"><span class="poem-tag">Body</span><span class="poem-arrow">→</span></div>
       </div>
     </div>
-  </section><div class="paired-section reveal">
+  </section>
+
+  <div class="paired-section reveal">
     <div class="paired-header">
       <p class="paired-tag">A pair — two voices, one story</p>
     </div>
@@ -829,7 +870,9 @@
     <span class="footer-name">Christina Rosie</span>
     <span class="footer-note">© 2024 · All poems are my own</span>
   </footer>
-</div><script>
+</div>
+
+<script>
 const poems = [
   {
     title: "The Falling Rain",
